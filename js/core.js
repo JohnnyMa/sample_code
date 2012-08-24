@@ -10,8 +10,6 @@ sample.ui = {};
 sample.data = {};
 sample.util = {};
 
-
-
 //define common functions for ui rendering
 sample.ui = (function() {
   var _renderHeader = function(options) {
@@ -30,20 +28,18 @@ sample.ui = (function() {
     //3. etc.
   };
 
-
-
   //used to render a overlay feature, commonly used when loading page or waiting for ajax response, etc.
   var _renderOverlay = function(options) {
-    //TODO: 
+    //TODO:
   };
-
-  
 
   return {
-    renderHeader : _renderHeader
+    renderHeader : _renderHeader,
+    renderTable : _renderTable,
+    renderFooter : _renderFooter,
+    renderOverlay : _renderOverlay
   };
 })();
-
 
 
 //define util functions
@@ -70,8 +66,8 @@ sample.utility = (function() {
     return returnVal;
   };
 
-  //util function for ajax call
-  //@param {Object} options = {url: string, async: boolean, data: object, success: callback, showOverlay: boolean}
+  // util function for ajax call
+  // @param {Object} options = {url: string, async: boolean, data: object, success: callback, showOverlay: boolean}
   var _sendAjax = function(options) {
     if (options.showOverlay) {
       pal.ui.loadingOverlayContainer.open();
@@ -107,8 +103,64 @@ sample.utility = (function() {
     });
   };
 
+  // format number
+  // e.g. 12000 => 1,2000
+  // @param amtStr number
+  var _formatIntNum = function(amtStr) {
+    var isInt = function(num) {
+      return (num % 1 === 0);
+    };
+    var amtStr = (isInt(amtStr)) ? amtStr : Number(amtStr).toFixed(0);
+    amtStr = "" + amtStr;
+    var a, renum = '';
+    var j = 0;
+    var a1 = '', a2 = '', a3 = '';
+    var tes = /^-/;
+    var isCurrency = ( typeof (isCurrency) != 'undefined') ? isCurrency : true;
+
+    a = amtStr.replace(/,/g, "");
+    a = a.replace(/[^-\.,0-9]/g, "");
+    a = a.replace(/(^\s*)|(\s*$)/g, "");
+    if (tes.test(a))
+      a1 = '-';
+    else
+      a1 = '';
+    a = a.replace(/-/g, "");
+    if (a != "0" && a.substr(0, 2) != "0.")
+      a = a.replace(/^0*/g, "");
+    j = a.indexOf('.');
+    if (j < 0)
+      j = a.length;
+    a2 = a.substr(0, j);
+    a3 = a.substr(j);
+    j = 0;
+    for ( i = a2.length; i > 3; i = i - 3) {
+      renum = "," + a2.substr(i - 3, 3) + renum;
+      j++;
+    }
+
+    renum = a1 + a2.substr(0, a2.length - j * 3) + renum + a3;
+
+    return renum;
+  };
+
+  var _strToJson = function(str) {
+    var json = (new Function("return " + str))();
+    return json;
+  };
+
   return {
     setCookie : _setCookie,
-    getCookie : _getCookie
+    getCookie : _getCookie,
+    sendAjax : _sendAjax,
+    formatIntNum : _formatIntNum,
+    strToJson : _strToJson
   };
+})();
+
+
+
+sample.preLoad = (function(){
+  //TODO: 
+  // pre-load data here
 })();
