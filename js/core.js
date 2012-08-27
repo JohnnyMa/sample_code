@@ -10,40 +10,8 @@ sample.ui = {};
 sample.data = {};
 sample.util = {};
 
-//define common functions for ui rendering
-sample.ui = (function() {
-  var _renderHeader = function(options) {
-    //TODO: add code to create header
-  };
-
-  var _renderTable = function(options) {
-    //TODO
-    //reminder: give different solutions to render table based on different HTML tag
-  };
-
-  var _renderFooter = function(options) {
-    //TODO:
-    //1. add footer content
-    //2. add copyright information
-    //3. etc.
-  };
-
-  //used to render a overlay feature, commonly used when loading page or waiting for ajax response, etc.
-  var _renderOverlay = function(options) {
-    //TODO:
-  };
-
-  return {
-    renderHeader : _renderHeader,
-    renderTable : _renderTable,
-    renderFooter : _renderFooter,
-    renderOverlay : _renderOverlay
-  };
-})();
-
-
 //define util functions
-sample.utility = (function() {
+sample.util = (function() {
   var _setCookie = function(key, value) {
     document.cookie = ("lang=" + value);
   };
@@ -63,6 +31,7 @@ sample.utility = (function() {
         returnVal = cookiesValue[i][1];
       }
     }
+
     return returnVal;
   };
 
@@ -149,18 +118,72 @@ sample.utility = (function() {
     return json;
   };
 
+  //load a javascript file into current file
+  var _loadScript = function(sURL) {
+    var dScript = document.createElement('script');
+    dScript.type = 'text/javascript';
+    dScript.src = sURL;
+    document.body.appendChild(dScript);
+  };
+
+  //load a line script into current file
+  var _loadScriptString = function(sCode) {
+    var dScript = document.createElement('script');
+    dScript.type = 'text/javascript';
+
+    try {
+      dScript.appendChild(document.createTextNode(sCode));
+    } catch (ex) {
+      dScript.text = sCode;
+    }
+
+    document.body.appendChild(dScript);
+  };
+
   return {
     setCookie : _setCookie,
     getCookie : _getCookie,
     sendAjax : _sendAjax,
     formatIntNum : _formatIntNum,
-    strToJson : _strToJson
+    strToJson : _strToJson,
+    loadScript : _loadScript,
+    loadScriptString : _loadScriptString
   };
 })();
 
+//define common functions for ui rendering
+sample.ui = (function() {
+  var _renderHeader = function(options) {
+    //TODO: add code to create header
 
+  };
 
-sample.preLoad = (function(){
-  //TODO: 
+  var _renderTable = function(options) {
+    //TODO
+    //reminder: give different solutions to render table based on different HTML tag
+  };
+
+  var _renderFooter = function(options) {
+    //TODO:
+    //1. add footer content
+    //2. add copyright information
+    //3. etc.
+  };
+
+  //used to render a overlay feature, commonly used when loading page or waiting for ajax response, etc.
+  var _renderOverlay = function(options) {
+    //TODO:
+  };
+
+  return {
+    renderHeader : _renderHeader,
+    renderTable : _renderTable,
+    renderFooter : _renderFooter,
+    renderOverlay : _renderOverlay
+  };
+})();
+
+sample.preLoad = (function() {
+  //TODO:
   // pre-load data here
 })();
