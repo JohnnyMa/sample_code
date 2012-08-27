@@ -119,7 +119,9 @@ sample.util = (function() {
   };
 
   //load a javascript file into current file
-  var _loadScript = function(sURL) {
+  var _loadScript = function(document, sURL) {
+    console.log(typeof document);
+    console.log(document.body);
     var dScript = document.createElement('script');
     dScript.type = 'text/javascript';
     dScript.src = sURL;
