@@ -1,4 +1,4 @@
-sample.util.loadScript(document, 'js/login.js');
+sample.util.loadScript('js/login.js');
 
 // render pages
 sample.ui.renderHeader();
