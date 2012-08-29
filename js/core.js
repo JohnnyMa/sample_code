@@ -63,6 +63,9 @@ sample.ui = (function() {
   var _renderHeader = function(options) {
     //TODO: add code to create header
     console.log('create header...');
+    console.log(document);
+    console.log(document.body);
+    
   };
 
   var _renderTable = function(options) {
