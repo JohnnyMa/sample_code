@@ -4,7 +4,6 @@
 
 (function(window, undefined) {
   var root = this, document = window.document, navigator = window.navigator, location = window.location;
-  var a = '11111';
   var sample = {};
   sample.offline = true;
   sample.debug = true;
@@ -14,7 +13,7 @@
   sample.util = {};
 
   sample.ui = {
-    
+
   };
 
   window.sample = sample;
@@ -63,7 +62,6 @@ sample.util = (function() {
 sample.ui = (function() {
   var _renderHeader = function(options) {
     //TODO: add code to create header
-    console.log(a);
     console.log('create header...');
   };
 
@@ -95,4 +93,4 @@ sample.ui = (function() {
 sample.preLoad = (function() {
   //TODO:
   // pre-load data here
-})(); 
+})();

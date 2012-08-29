@@ -5,6 +5,6 @@ sample.login = (function() {
 
   //TODO define login handlers
   return {
-    
+
   };
 })();
