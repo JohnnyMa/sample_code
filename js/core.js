@@ -58,11 +58,21 @@ sample.util = (function() {
 //define common functions for ui rendering
 sample.ui = (function() {
   var _renderHeader = function(options) {
-    //TODO: add code to create header
-    console.log('create header...');
-    console.log(document);
-    console.log(document.body);
-    
+    var dElement = document.createElement(options.tagName);
+    dElement.id = 'header';
+    dElement.textContent = options.content;
+    document.body.appendChild(dElement);
+  };
+
+  var _renderContainer = function(options) {
+    var dElement = document.createElement(options.tagName);
+    dElement.id = options.id || '';
+    console.log(options.className);
+    if (undefined !== options.className) {
+      dElement.className = options.className;
+    }
+    dElement.textContent = options.content || '';
+    document.body.appendChild(dElement);
   };
 
   var _renderTable = function(options) {
@@ -75,6 +85,11 @@ sample.ui = (function() {
     //1. add footer content
     //2. add copyright information
     //3. etc.
+    var dElement = document.createElement(options.tagName);
+    dElement.id = 'footer';
+    dElement.className = options.className || "";
+    dElement.textContent = options.content || "";
+    document.body.appendChild(dElement);
   };
 
   //used to render a overlay feature, commonly used when loading page or waiting for ajax response, etc.
@@ -86,7 +101,8 @@ sample.ui = (function() {
     renderHeader : _renderHeader,
     renderTable : _renderTable,
     renderFooter : _renderFooter,
-    renderOverlay : _renderOverlay
+    renderOverlay : _renderOverlay,
+    renderContainer : _renderContainer
   };
 })();
 
