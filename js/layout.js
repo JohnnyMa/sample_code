@@ -1,6 +1,9 @@
-//sample.util.loadScript('js/login.js'); //TODO
-
-// render pages
-sample.ui.renderHeader();
-sample.ui.renderTable();
-sample.ui.renderFooter();
+window.onload = function() {
+  sample.util.loadScript('js/login.js');
+  
+  
+  // render pages
+  sample.ui.renderHeader();
+  sample.ui.renderTable();
+  sample.ui.renderFooter();
+};
