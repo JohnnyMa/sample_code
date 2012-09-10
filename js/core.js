@@ -11,6 +11,7 @@
   sample.ui = {};
   sample.data = {};
   sample.util = {};
+  sample.services = {};
 
   sample.ui = {
 
