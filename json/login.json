@@ -1,0 +1,9 @@
+{
+    "userlist": [
+        {
+            "username": "demo",
+            "passcode": "demo",
+            "role": "Manager"
+        }
+    ]
+}

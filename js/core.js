@@ -3,8 +3,7 @@
 //author: johnny.ma
 
 (function(window, undefined) {
-  var root = this, document = window.document, navigator = window.navigator, location = window.location;
-  var sample = {};
+  var root = this, document = window.document, navigator = window.navigator, location = window.location, sample = {};
   sample.offline = true;
   sample.debug = true;
   sample.constants = {};
@@ -13,9 +12,9 @@
   sample.util = {};
   sample.services = {};
 
-  sample.ui = {
-
-  };
+  sample.constants.HOSTNAME = 'http://127.0.0.1/';
+  //TODO
+  sample.constants.URL_LOGIN = sample.offline ? '../json/login.json' : sample.constants.HOSTNAME + 'login.php';
 
   window.sample = sample;
 })(window);
