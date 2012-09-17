@@ -1,0 +1,35 @@
+@color: #4D926F;
+@fontSize: 26px;
+
+
+.rounded-corners (@radius: 5px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+
+#header {
+  color: @color;
+  font-size: @fontSize * 2;
+  h1 {
+    font-size: @fontSize;
+    font-weight: bold;
+    .rounded-corners;
+  }
+
+  h2 {
+    font-size: @fontSize;
+    font-weight: bold;
+    .rounded-corners(10px);
+  }
+}
+
+#container {
+  p { font-size: @fontSize;
+    a { text-decoration: none;
+      &:hover { border-width: 1px }
+    }
+  }
+}
+

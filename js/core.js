@@ -6,7 +6,13 @@
   var root = this, document = window.document, navigator = window.navigator, location = window.location, sample = {};
   sample.offline = true;
   sample.debug = true;
+  sample.consoleLog = function(msg) {
+    if (sample.debug) {
+      console.log(msg);
+    }
+  };
   sample.constants = {};
+  sample.core = {};
   sample.ui = {};
   sample.data = {};
   sample.util = {};
@@ -67,7 +73,7 @@ sample.ui = (function() {
   var _renderContainer = function(options) {
     var dElement = document.createElement(options.tagName);
     dElement.id = options.id || '';
-    console.log(options.className);
+    sample.consoleLog(options.className);
     if (undefined !== options.className) {
       dElement.className = options.className;
     }
