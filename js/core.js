@@ -4,13 +4,12 @@
 
 (function(window, undefined) {
   var root = this, document = window.document, navigator = window.navigator, location = window.location, sample = {};
-  sample.offline = true;
-  sample.debug = true;
-  sample.consoleLog = function(msg) {
-    if (sample.debug) {
-      console.log(msg);
-    }
+  sample.config = {
+    offline : true,
+    debug : true,
+    hostname : 'http://127.0.0.1/'
   };
+
   sample.constants = {};
   sample.core = {};
   sample.ui = {};
@@ -18,9 +17,9 @@
   sample.util = {};
   sample.services = {};
 
-  sample.constants.HOSTNAME = 'http://127.0.0.1/';
+  // sample.constants.HOSTNAME = 'http://127.0.0.1/';
   //TODO
-  sample.constants.URL_LOGIN = sample.offline ? '../json/login.json' : sample.constants.HOSTNAME + 'login.php';
+  sample.constants.URL_LOGIN = sample.offline ? '../json/login.json' : sample.config.hostname + 'login.php';
 
   window.sample = sample;
 })(window);
@@ -109,6 +108,18 @@ sample.ui = (function() {
     renderFooter : _renderFooter,
     renderOverlay : _renderOverlay,
     renderContainer : _renderContainer
+  };
+})();
+
+sample.util = (function() {
+  var _consoleLog = function(msg) {
+    if (sample.config.debug) {
+      console.log(msg);
+    }
+  };
+
+  return {
+    consoleLog : _consoleLog
   };
 })();
 
