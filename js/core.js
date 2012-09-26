@@ -72,7 +72,7 @@ sample.ui = (function() {
   var _renderContainer = function(options) {
     var dElement = document.createElement(options.tagName);
     dElement.id = options.id || '';
-    sample.consoleLog(options.className);
+    sample.util.consoleLog(options.className);
     if (undefined !== options.className) {
       dElement.className = options.className;
     }
