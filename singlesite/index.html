@@ -57,8 +57,11 @@
             <dd><a href="#">A</a></dd>
         </dl>
 
-        <a href="#" class="toggle">Toggle</a>
+        <a href="#" class="toggle">Follow us</a>
+    </section>
 
+    <section class="aboutus">
+      <div style="width: 600px; height: 400px; background: gray;"></div>
     </section>
 
     <div class="warning">
@@ -73,48 +76,8 @@
     </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script>window.jQuery||document.write('<script src="/js/libs/jquery-1.8.0.min.js"><\/script>');</script>
     <script src="js/lib/makisu.js"></script>
-    <script>
-      // The `enabled` flag will be `false` if CSS 3D isn't available
-      if ($.fn.makisu.enabled) {
-        var $study = $('.study');
-        var $nigiri = $('.life');
-        var $maki = $('.work');
-
-        // Create Makisus
-        $nigiri.makisu({
-          selector : 'dd',
-          overlap : 0.85,
-          speed : 1.7
-        });
-
-        $maki.makisu({
-          selector : 'dd',
-          overlap : 0.6,
-          speed : 0.85
-        });
-
-        $study.makisu({
-          selector : 'dd',
-          overlap : 0.2,
-          speed : 0.5
-        });
-
-        // Open all
-        $('.list').makisu('close');
-
-        // Toggle on click
-        $('.toggle').on('click', function() {
-          $('.list').makisu('toggle');
-        });
-
-        // Disable all links
-        $('.demo a').click(function(event) {
-          event.preventDefault();
-        });
-      } else {
-        $('.warning').show();
-      }
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
