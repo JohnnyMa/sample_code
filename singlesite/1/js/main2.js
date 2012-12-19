@@ -6,9 +6,7 @@ jQuery(document).ready(function($){
 	
 	// the background, first page of portfolio thumbs and thumb hover overlays are pre-loaded for best performance
 	
-	$('body').append('<div id="loading-screen"></div>');
-	$('#loading-screen').append('<div id="loading-indicator"></div>')
-	$('#loading-screen').css('background-color', $('body').css('background-color'));
+
 
 	/**************************************
 	 * Portfolio (Before Page Load Effects)
@@ -157,7 +155,7 @@ jQuery(document).ready(function($){
 	}
 	
 	// Activate title overlay hover effect
-	$(".portfolio-thumbs").delegate('li', 'mouseenter', function() {		
+	$(".portfolio-thumbs").delegate('li', 'mouseenter', function() {
 		
 		if (loading_effects_done) { // don't let hover before page load effect is done
 		

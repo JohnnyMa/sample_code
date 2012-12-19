@@ -410,6 +410,7 @@ a.button:active {
   float: right;
   position: relative;
   line-height: 80px; /* same as #header-content height above */
+  margin-top: 40px;
 }
 
 #nav ul {
