@@ -12,3 +12,6 @@ It is extendibility.
 
 New Features Added:
 * 1. LESS (http://lesscss.org)
+* 2. automation deployment tool added. 
+     (ant based. sample build script added. More task needed.)
+     
