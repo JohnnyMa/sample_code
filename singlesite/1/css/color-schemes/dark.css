@@ -8,7 +8,7 @@
 
 body, #loading-screen {
   background-color: #1d1d1d; /*shows while image is loading */
-  background-image: url(../../img/color-schemes/dark/bg.jpg);
+  background-image: url(../../images/color-schemes/dark/bg.jpg);
 }
 
 /* Text Color */
@@ -59,7 +59,7 @@ input[type=text], input[type=email], input[type=url], input[type=search], input[
 
 #loading-indicator, /* initial page load */
 .pp_loaderIcon/* lightbox */ {
-  background-image: url(../../img/color-schemes/dark/loading.gif);
+  background-image: url(../../images/color-schemes/dark/loading.gif);
 }
 
 /* Image Frames */
@@ -78,7 +78,7 @@ input[type=text], input[type=email], input[type=url], input[type=search], input[
 
 .box {
 
-  background-image: url(../../img/color-schemes/dark/box-bg.png);
+  background-image: url(../../images/color-schemes/dark/box-bg.png);
   border-color: #313131; /* highlight on inner box */
   /* Shadow */
   -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.30);
@@ -98,7 +98,7 @@ a.button {
 
   color: #222;
   background-color: #eee;
-  background-image: url(../../img/color-schemes/dark/button-overlay.png);
+  background-image: url(../../images/color-schemes/dark/button-overlay.png);
   border-color: #fff;
   border-right-color: #bbb;
   border-bottom-color: #bbb;
@@ -120,7 +120,7 @@ a.button:hover {
 /* Header Bar */
 
 #header {
-  background-image: url(../../img/color-schemes/dark/header-bg.png);
+  background-image: url(../../images/color-schemes/dark/header-bg.png);
 }
 
 /* Logo */
@@ -174,7 +174,7 @@ a.button:hover {
 /* Thumbnail Overlay (Hover) */
 
 .portfolio-thumb-overlay {
-  background-image: url(../../img/color-schemes/dark/thumb-overlay.png);
+  background-image: url(../../images/color-schemes/dark/thumb-overlay.png);
 }
 
 /* Overlay Title Text */
@@ -209,15 +209,15 @@ a.button:hover {
 /* Button Sprites (Prev, Next, etc.) */
 
 #portfolio-page-prev, #portfolio-page-next, .pp_arrow_previous, .pp_arrow_next, .pp_close, .pp_expand, .pp_contract {
-  background-image: url(../../img/color-schemes/dark/button-sprites.png);
+  background-image: url(../../images/color-schemes/dark/button-sprites.png);
 }
 
 .pp_next:hover {
-  background-image: url(../../img/color-schemes/dark/lightbox-hover-next.png);
+  background-image: url(../../images/color-schemes/dark/lightbox-hover-next.png);
 }
 
 .pp_previous:hover {
-  background-image: url(../../img/color-schemes/dark/lightbox-hover-prev.png);
+  background-image: url(../../images/color-schemes/dark/lightbox-hover-prev.png);
 }
 
 /* Lightbox Border / Background */
@@ -245,7 +245,7 @@ a.button:hover {
 /* Skills & Experience Lists - Custom Icon */
 
 #about-skills li, #about-experience li {
-  background-image: url(../../img/color-schemes/dark/check-icon.png);
+  background-image: url(../../images/color-schemes/dark/check-icon.png);
 }
 
 /**********************************************
@@ -265,11 +265,11 @@ a.button:hover {
 /* Social Media Icons */
 
 .icon-twitter, .icon-facebook, .icon-google-plus, .icon-dribbble, .icon-forrst, .icon-flickr, .icon-youtube, .icon-vimeo, .icon-skype, .icon-linkedin {
-  background-image: url(../../img/color-schemes/dark/social-media-sprites.png);
+  background-image: url(../../images/color-schemes/dark/social-media-sprites.png);
 }
 
 /* Contact Form Error List - Custom Icon */
 
 #contact-error li {
-  background-image: url(../../img/color-schemes/dark/bullet-icon.png);
+  background-image: url(../../images/color-schemes/dark/bullet-icon.png);
 }

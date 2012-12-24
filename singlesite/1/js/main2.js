@@ -608,11 +608,11 @@ jQuery(document).ready(function($){
 			});
 
 			// Custom Marker
-			var image = new google.maps.MarkerImage('img/map-icon.png',
+			var image = new google.maps.MarkerImage('images/map-icon.png',
 				new google.maps.Size(26, 26),
 				new google.maps.Point(0,0),
 				new google.maps.Point(13, 26));		  
-			var shadow = new google.maps.MarkerImage('img/map-icon-shadow.png',
+			var shadow = new google.maps.MarkerImage('images/map-icon-shadow.png',
 				new google.maps.Size(40, 26),
 				new google.maps.Point(0,0),
 				new google.maps.Point(13, 26));
